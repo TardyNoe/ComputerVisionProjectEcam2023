@@ -34,7 +34,7 @@ Another approach was template matching using the build-in OpenCV function. While
     | Distance of Corners     | 240 - 270 | 190-210 | 250-270|
 
 ### Results
-An accompanying video demonstrates the system in action, displaying real-time data on the area, corner count, and corner distances, along with the identified gesture (Rock, Paper, or Scissors).
+An accompanying video demonstrates the system in action, displaying real-time data on the area, corner count, and corner distances, along with the identified gesture (Rock, Paper, or Scissors). ([Link](https://www.youtube.com/watch?v=r0v6IuTioFA)).
 
 The program runs at approximately 30 frames per second on my old MacBook. The detection is fairly accurate and usually takes less than a second to converge to the correct gesture.
 
