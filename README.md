@@ -18,7 +18,7 @@ Another approach was template matching using the build-in OpenCV function. While
 1. **Capture Video:** The script captures a video frame from the webcam.
 2. **Color Conversion and Skin Filter:** The captured BGR image is converted to the HSV (Hue, Saturation, Value) color space. This conversion facilitates the application of a skin color filter.
 
-    ![Color filter mask](#)
+    ![Color filter mask](https://raw.githubusercontent.com/TardyNoe/ComputerVisionProjectEcam2023/main/assets/colorfilter.png)
    
 3. **Movement Detection:** By computing the difference between consecutive frames, the script effectively isolates the moving parts in the video, primarily the hand.
 4. **Mask Post-Treatment:** The mask undergoes noise reduction and dilation to enhance the hand's representation in the frame.
