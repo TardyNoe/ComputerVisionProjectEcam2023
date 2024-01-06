@@ -3,7 +3,7 @@
 
 ### Introduction
 The aim of this project is to develop a system capable of recognizing hand gestures for the game Rock-Paper-Scissors using a camera. This system is implemented using Python and the OpenCV library. The challenge is to accurately detect the difference between a Rock, a paper, and a scissor made with the hand.
-
+![Hands](https://raw.githubusercontent.com/TardyNoe/ComputerVisionProjectEcam2023/main/assets/hands.png)
 ### Method
 The program operates by continuously capturing frames from the webcam, applying a skin color filter to isolate the hand and the rest of the exposed body. By comparing consecutive frames, it identifies the moving part of the image, presumed to be the hand, and applies morphological operations to enhance the mask. The program then detects contours and computes the convex hull around the largest contour, assumed to be the hand shape. It calculates the number of corners, the area, and the average distance between corners of the hull over the last second to characterize the hand gesture. These characteristics are compared against predefined thresholds to classify the gesture as Rock, Paper, or Scissors. The program updates and displays this information in real-time.
 
@@ -21,7 +21,7 @@ Another approach was template matching using the build-in OpenCV function. While
     ![Color filter mask](https://raw.githubusercontent.com/TardyNoe/ComputerVisionProjectEcam2023/main/assets/colorfilter.png)
    
 3. **Movement Detection:** By computing the difference between consecutive frames, the script effectively isolates the moving parts in the video, primarily the hand.
-4. **Mask Post-Treatment:** The mask undergoes noise reduction and dilation to enhance the hand's representation in the frame.
+4. **Mask Post-Treatment:** The mask undergoes noise reduction and dilation to enhance the hand's representation in the frame. ![Mask](https://raw.githubusercontent.com/TardyNoe/ComputerVisionProjectEcam2023/main/assets/mask.png)
 5. **Contour Detection and Convex Hull:** The script detects contours in the masked image. The largest contour is assumed to represent the hand, and a convex hull is drawn around it. This hull helps in estimating the shape of the hand.
 6. **Gesture Differentiation:** The system classifies the gesture as Rock, Paper, or Scissors based on the average measurements of the hull's area, the number of corners, and the average distance between corners over the last second.
 
