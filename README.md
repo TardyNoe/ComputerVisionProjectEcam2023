@@ -3,7 +3,7 @@
 
 ### Introduction
 The aim of this project is to develop a system capable of recognizing hand gestures for the game Rock-Paper-Scissors using a camera. This system is implemented using Python and the OpenCV library. The challenge is to accurately detect the difference between a Rock, a paper, and a scissor made with the hand.
-![Hands](https://raw.githubusercontent.com/TardyNoe/ComputerVisionProjectEcam2023/main/assets/hands.png)
+![Demo](https://github.com/TardyNoe/ComputerVisionProjectEcam2023/blob/main/assets/ezgif-5-c971e230dc.gif?raw=true)
 ### Method
 The program operates by continuously capturing frames from the webcam, applying a skin color filter to isolate the hand and the rest of the exposed body. By comparing consecutive frames, it identifies the moving part of the image, presumed to be the hand, and applies morphological operations to enhance the mask. The program then detects contours and computes the convex hull around the largest contour, assumed to be the hand shape. It calculates the number of corners, the area, and the average distance between corners of the hull over the last second to characterize the hand gesture. These characteristics are compared against predefined thresholds to classify the gesture as Rock, Paper, or Scissors. The program updates and displays this information in real-time.
 
@@ -35,7 +35,6 @@ Another approach was template matching using the build-in OpenCV function. While
 
 ### Results
 An accompanying video demonstrates the system in action, displaying real-time data on the area, corner count, and corner distances, along with the identified gesture (Rock, Paper, or Scissors). ([Link](https://www.youtube.com/watch?v=r0v6IuTioFA)).
-![Demo](https://github.com/TardyNoe/ComputerVisionProjectEcam2023/blob/main/assets/ezgif-5-c971e230dc.gif?raw=true)
 
 The program runs at approximately 30 frames per second on my old MacBook. The detection is fairly accurate and usually takes less than a second to converge to the correct gesture.
 
